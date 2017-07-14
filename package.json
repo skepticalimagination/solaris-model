@@ -1,0 +1,45 @@
+{
+  "name": "solaris-model",
+  "version": "0.1.0",
+  "description": "A logical model of our solar system",
+  "private": true,
+  "main": "dist/solaris-model.js",
+  "module": "dist/solaris-model.mjs",
+  "scripts": {
+    "rollup": "rollup -c",
+    "test": "mocha test -u tdd --compilers coffee:./rollup.config.js",
+    "test-watch": "mocha test -wG -u tdd --compilers coffee:./rollup.config.js",
+    "uglify": "uglifyjs dist/solaris-model.js -cm -o dist/solaris-model.min.js",
+    "dist": "run-s rollup uglify"
+  },
+  "engines": {
+    "node": ">= 4.2.0"
+  },
+  "dependencies": {
+    "quaternion": "^2.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "coffee-script": "^1.12.6",
+    "deasync": "^0.1.10",
+    "mocha": "^3.2.0",
+    "npm-run-all": "^4.0.2",
+    "rollup": "^0.43.0",
+    "rollup-plugin-coffee-script": "^1.1.0",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-watch": "^4.0.0",
+    "uglify-js": "^3.0.15"
+  },
+  "keywords": [
+    "solar",
+    "planets",
+    "astronomy",
+    "space",
+    "orbital",
+    "model",
+    "engine",
+    "simulator"
+  ],
+  "license": "MIT"
+}
