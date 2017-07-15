@@ -1,10 +1,14 @@
 {
   "name": "solaris-model",
-  "version": "0.1.0",
-  "description": "A logical model of our solar system",
-  "private": true,
+  "version": "0.0.0",
+  "description": "A logical model of our Solar System providing the positions of planets, moons and other celestial bodies as a function of time.",
   "main": "dist/solaris-model.js",
+  "repository": "https://github.com/skepticalimagination/solaris-model.git",
   "module": "dist/solaris-model.mjs",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "rollup": "rollup -c",
     "test": "mocha test -u tdd --compilers coffee:./rollup.config.js",
@@ -41,5 +45,7 @@
     "engine",
     "simulator"
   ],
+  "author": "wintermutt",
+  "bugs": "https://github.com/skepticalimagination/solaris-model/issues",
   "license": "MIT"
 }
